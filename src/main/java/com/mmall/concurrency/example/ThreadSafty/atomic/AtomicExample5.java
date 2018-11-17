@@ -1,4 +1,4 @@
-package com.mmall.concurrency.example.atomic;
+package com.mmall.concurrency.example.ThreadSafty.atomic;
 
 import com.mmall.concurrency.annotations.ThreadSafe;
 import lombok.Getter;
@@ -10,6 +10,10 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 @ThreadSafe
 public class AtomicExample5 {
 
+    /**
+     * AtomicIntegerFieldUpdater 核心是原子性的去更新某一个类的实例的指定的某一个字段
+     * 构造函数第一个参数为类定义，第二个参数为指定字段的属性名，必须是volatile修饰并且非static的字段
+     */
     private static AtomicIntegerFieldUpdater<AtomicExample5> updater = AtomicIntegerFieldUpdater.newUpdater(AtomicExample5.class, "count");
 
     @Getter

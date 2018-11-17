@@ -1,4 +1,4 @@
-package com.mmall.concurrency.example.atomic;
+package com.mmall.concurrency.example.ThreadSafty.atomic;
 
 import com.mmall.concurrency.annotations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;

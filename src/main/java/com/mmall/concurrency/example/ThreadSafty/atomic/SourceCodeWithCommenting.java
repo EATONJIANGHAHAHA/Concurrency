@@ -1,4 +1,4 @@
-package com.mmall.concurrency.example.atomic;
+package com.mmall.concurrency.example.ThreadSafty.atomic;
 
 public class SourceCodeWithCommenting {
 
