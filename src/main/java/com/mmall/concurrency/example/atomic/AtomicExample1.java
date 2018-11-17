@@ -53,6 +53,10 @@ public class AtomicExample1 {
      * operation. If two values are equal, then it means the value is not been modified by another thread, perform add
      *  * operation. If two values are not equal, then it has been modified by another thread, do nothing but wait
      *  until another iteration performed.
+     *
+     *  When failed to perform the add operation, the program will keep iterating, this will drawn up
+     *  some system resources.
+     *
      */
     private static void add() {
         count.incrementAndGet();

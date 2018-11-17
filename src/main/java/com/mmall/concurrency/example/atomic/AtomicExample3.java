@@ -19,7 +19,7 @@ public class AtomicExample3 {
     //同时并发吃行的线程数
     public static int threadTotal = 200;
 
-    //
+
     public static LongAdder count = new LongAdder();
 
     public static void main(String[] args) throws InterruptedException {
@@ -45,11 +45,12 @@ public class AtomicExample3 {
     }
 
     /**
-     * traditional CAS implementation, by determine whether if the value within an object is equal to the base
-     * implementation's value of that object (in this case is the shared memory), so that it knows when to perform the
-     * operation. If two values are equal, then it means the value is not been modified by another thread, perform add
-     *  * operation. If two values are not equal, then it has been modified by another thread, do nothing but wait
-     *  until another iteration performed.
+     * LongAdder的设计思想：核心是将热点数据分离，将内部数据value分成一个数组，每个线程访问时，
+     * 通过hash等算法映射到其中一个数字进行技术，而最终计数结果为这个数组的求和累加，
+     * 其中热点数据value会被分离成多个热点单元的数据cell，每个cell独自维护内部的值，
+     * 当前value的实际值由所有的cell累积合成，从而使热点进行了有效的分离，提高了并行度
+     * LongAdder 在低并发的时候通过直接操作base，可以很好的保证和Atomic的性能基本一致，
+     * 在高并发的场景，通过热点分区来提高并行度
      */
     private static void add() {
         count.increment();
