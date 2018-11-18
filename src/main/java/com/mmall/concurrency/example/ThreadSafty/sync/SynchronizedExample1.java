@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
 
 /**
  * 如果有其他类继集成本类,synchronized 方法在子类中将不会再具有synchronized效力.
- * 因为synchronized 不属于方法生命的一个部分.
+ * 因为synchronized 不属于方法声明的一个部分.
  */
 @Slf4j
 public class SynchronizedExample1 {
