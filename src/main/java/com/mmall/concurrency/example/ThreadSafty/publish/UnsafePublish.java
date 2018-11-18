@@ -1,4 +1,4 @@
-package com.mmall.concurrency.example.publish;
+package com.mmall.concurrency.example.ThreadSafty.publish;
 
 import com.mmall.concurrency.annotations.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;

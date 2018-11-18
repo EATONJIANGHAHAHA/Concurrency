@@ -2,7 +2,7 @@ package com.mmall.concurrency.example.ThreadSafty.atomic;
 
 public class SourceCodeWithCommenting {
 
-    class CompareAndSwap {
+    class Source {
         /**
          * Atomically increments by one the current value.
          *
