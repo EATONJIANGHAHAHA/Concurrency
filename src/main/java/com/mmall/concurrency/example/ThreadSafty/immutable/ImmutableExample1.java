@@ -13,7 +13,7 @@ public class ImmutableExample1 {
     private final static Integer a = 1;
     private final static String b = "2";
 
-    //使用final修饰的变量,只是不允许指向另一个对象,但是对象里面的成员变量时依然允许被修改的.这里容易产生线程不安全问题.
+    //使用final修饰的变量,只是不允许指向另一个对象,但是对象里面的成员变量是依然允许被修改的.这里容易产生线程不安全问题.
     private final static Map<Integer, Integer> map = Maps.newHashMap();
 
     static {

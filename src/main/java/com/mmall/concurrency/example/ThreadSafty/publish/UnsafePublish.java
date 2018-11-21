@@ -9,6 +9,7 @@ import java.util.Arrays;
 @NotThreadSafe
 public class UnsafePublish {
 
+    //通过公共方法返回类的私有对象本身就是一种线程不安全的行为.
     private String[] states = {"a", "b", "c"};
 
     public String[] getStates() {

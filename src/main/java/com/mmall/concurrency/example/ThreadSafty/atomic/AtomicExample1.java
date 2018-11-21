@@ -9,11 +9,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Slf4j
-@ThreadSafe
 /**
  * CAS
  */
+@Slf4j
+@ThreadSafe
 public class AtomicExample1 {
 
     //请求总数
