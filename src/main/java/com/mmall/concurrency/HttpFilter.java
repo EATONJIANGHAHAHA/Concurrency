@@ -1,6 +1,6 @@
 package com.mmall.concurrency;
 
-import com.mmall.concurrency.example.ThreadSafty.threadLocal.RequestHolder;
+import com.mmall.concurrency.example.threadSafty.threadLocal.RequestHolder;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.*;
